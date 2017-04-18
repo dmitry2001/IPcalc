@@ -152,11 +152,13 @@ int main()
 					a &= IPv4::PrMask(pr);
 					fout << a;
 				}
-				else if (cmd == "close")
+				else if (cmd == "close_file")
 				{
 					break;
 				}
 			}
+			fin.close();
+			fout.close();
 			cout << "Done!" << endl;
 		}
 		else if(cmd == "exit")
