@@ -86,6 +86,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="in.test" />
+    <None Include="out.test" />
+    <None Include="suggested_out.test" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

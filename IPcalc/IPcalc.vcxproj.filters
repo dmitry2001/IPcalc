@@ -31,5 +31,11 @@
     <None Include="in.test">
       <Filter>Файлы ресурсов</Filter>
     </None>
+    <None Include="out.test">
+      <Filter>Файлы ресурсов</Filter>
+    </None>
+    <None Include="suggested_out.test">
+      <Filter>Файлы ресурсов</Filter>
+    </None>
   </ItemGroup>
 </Project>

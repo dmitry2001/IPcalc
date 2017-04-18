@@ -1,3 +1,53 @@
 max_mask
-255.255.0.0
-255.0.0.0
+255.255.0.1
+255.0.0.1
+max_mask 128.0.0.1 255.34.78.9
+max_mask
+237.156.86.93
+34.9.78.1
+max_mask
+32.130.26.8
+32.174.78.8
+max_mask
+145.67.43.122 145.67.43.124
+max_net.id
+1.255.0.1
+1.0.0.1
+max_net.id 128.0.0.1 255.34.78.9
+max_net.id
+237.156.86.93
+34.9.78.1
+max_net.id
+32.130.26.8
+32.174.78.8
+max_net.id
+145.67.43.122 145.67.43.124
+prefix_to_mask 4
+prefix_to_mask 13
+prefix_to_mask 24
+prefix_classes
+8.0.0.8
+mask_classes
+8.0.0.8
+net.id_classes
+8.0.0.8
+prefix_classes
+23.223.25.45
+mask_classes
+23.223.25.45
+net.id_classes
+23.223.25.45
+prefix_classes
+213.24.76.23
+mask_classes
+213.24.76.23
+prefix_classes
+180.45.34.78
+mask_classes
+180.45.34.78
+net.id_CIDR
+23.223.25.45
+6
+net.id_CIDR
+233.223.25.45
+19
