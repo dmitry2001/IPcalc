@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "WrongInputFormatException.h"
 using namespace std;
 
 class IPv4

@@ -51,12 +51,8 @@ unsigned IPv4::prclasses(IPv4_t addr)
 	b = addr / powi(2, 29);
 	if (b == 6) return 24;
 	b = addr / powi(2, 28);
-	if (b == 14)
-		cout << "class D";
-	return ULONG_MAX;
-	if (b == 15)
-		cout << "class E";
-	return ULONG_MAX;
+	if (b == 14) throw WrongInputFormatException("class D (multicast)");
+	if (b == 15)throw WrongInputFormatException("class E reserved");
 }
 IPv4 IPv4::MaxMask(IPv4 a, IPv4 b)
 {
@@ -104,12 +100,36 @@ istream& operator>> (istream& in, IPv4& ipcl)
 	ipcl.ip = 0;
 	unsigned qw; char sep;
 	in >> qw >> sep;
+	if (in.fail() || qw > 255)
+	{
+		in.clear();
+		in.ignore(255, ' ');
+		throw WrongInputFormatException("Wrong ip format");
+	}
 	ipcl.ip += qw*IPv4::powi(2, 24);
 	in >> qw >> sep;
+	if (in.fail() || qw > 255)
+	{
+		in.clear();
+		in.ignore(255, ' ');
+		throw WrongInputFormatException("Wrong ip format");
+	}
 	ipcl.ip += qw*IPv4::powi(2, 16);
 	in >> qw >> sep;
+	if (in.fail() || qw > 255)	
+	{
+		in.clear();
+		in.ignore(255, ' ');
+		throw WrongInputFormatException("Wrong ip format");
+	}
 	ipcl.ip += qw*IPv4::powi(2, 8);
 	in >> qw;
+	if (in.fail() || qw > 255)	
+	{
+		in.clear();
+		in.ignore(255, ' ');
+		throw WrongInputFormatException("Wrong ip format");
+	}
 	ipcl.ip += qw;
 	return in;
 }
