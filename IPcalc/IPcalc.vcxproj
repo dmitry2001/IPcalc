@@ -80,9 +80,11 @@
   <ItemGroup>
     <ClCompile Include="IPv4.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="WrongInputFormatException.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IPv4.h" />
+    <ClInclude Include="WrongInputFormatException.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="in.test" />
