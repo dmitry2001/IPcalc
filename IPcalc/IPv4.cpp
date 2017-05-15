@@ -103,7 +103,10 @@ istream& operator>> (istream& in, IPv4& ipcl)
 	if (in.fail() || qw > 255)
 	{
 		in.clear();
-		in.ignore(255, ' ');
+		char c;
+		do{
+			c = cin.get();
+		} while (c != '\n' && c != ' ');
 		throw WrongInputFormatException("Wrong ip format");
 	}
 	ipcl.ip += qw*IPv4::powi(2, 24);
@@ -111,7 +114,10 @@ istream& operator>> (istream& in, IPv4& ipcl)
 	if (in.fail() || qw > 255)
 	{
 		in.clear();
-		in.ignore(255, ' ');
+		char c;
+		do{
+			c = cin.get();
+		} while (c != '\n' && c != ' ');
 		throw WrongInputFormatException("Wrong ip format");
 	}
 	ipcl.ip += qw*IPv4::powi(2, 16);
@@ -119,7 +125,10 @@ istream& operator>> (istream& in, IPv4& ipcl)
 	if (in.fail() || qw > 255)	
 	{
 		in.clear();
-		in.ignore(255, ' ');
+		char c;
+		do{
+			c = cin.get();
+		} while (c != '\n' && c != ' ');
 		throw WrongInputFormatException("Wrong ip format");
 	}
 	ipcl.ip += qw*IPv4::powi(2, 8);
@@ -127,7 +136,10 @@ istream& operator>> (istream& in, IPv4& ipcl)
 	if (in.fail() || qw > 255)	
 	{
 		in.clear();
-		in.ignore(255, ' ');
+		char c;
+		do{
+			c = cin.get();
+		} while (c != '\n' && c != ' ');
 		throw WrongInputFormatException("Wrong ip format");
 	}
 	ipcl.ip += qw;

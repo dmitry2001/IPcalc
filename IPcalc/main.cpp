@@ -55,7 +55,10 @@ int main()
 				if (cin.fail() || p > 32)
 				{
 					cin.clear();
-					cin.ignore(255, '\n');
+					char c;
+					do{
+						c = cin.get();
+					} while (c != '\n' && c != ' ');
 					throw WrongInputFormatException("Wrong prefix format");
 				}
 				m = IPv4::PrMask(p);
@@ -96,7 +99,10 @@ int main()
 				if (cin.fail() || pr > 32)
 				{
 					cin.clear();
-					cin.ignore(255, '\n');
+					char c;
+					do{
+						c = cin.get();
+					} while (c != '\n' && c != ' ');
 					throw WrongInputFormatException("Wrong prefix format");
 				}
 				a &= IPv4::PrMask(pr);
@@ -135,7 +141,10 @@ int main()
 							if (fin.fail() || p > 32)
 							{
 								fin.clear();
-								fin.ignore(255, ' ');
+								char c;
+								do{
+									c = fin.get();
+								} while (c != '\n' && c != ' ');
 								throw WrongInputFormatException("Wrong prefix format");
 							}
 							m = IPv4::PrMask(p);
@@ -180,7 +189,10 @@ int main()
 							if (fin.fail() || pr > 32)
 							{
 								fin.clear();
-								fin.ignore(255, ' ');
+								char c;
+								do{
+									c = fin.get();
+								} while (c != '\n' && c != ' ');
 								throw WrongInputFormatException("Wrong prefix format");
 							}
 							a &= IPv4::PrMask(pr);
